@@ -61,21 +61,21 @@ The application fetches product data from:
 
 ### Folder Structure
 
-/src
-|-- /components
-|   |-- CartItem.jsx       # Individual cart item component
-|   |-- EmptyCart.jsx      # Empty cart state component
-|   |-- Header.jsx         # Navigation header
-|   |-- Loader.jsx         # Loading spinner
-|   |-- ProductItem.jsx    # Product card component
-|-- /context
-|   |-- ProductContext.js  # Global state management
-|-- /pages
-|   |-- Cart.jsx           # Cart page
-|   |-- Home.jsx           # Home page
-|   |-- NotFound.jsx       # 404 page
-|   |-- Products.jsx       # Products listing page
-|-- App.js                 # Main app with routes
+    /src
+    |-- /components
+    |   |-- CartItem.jsx       # Individual cart item component
+    |   |-- EmptyCart.jsx      # Empty cart state component
+    |   |-- Header.jsx         # Navigation header
+    |   |-- Loader.jsx         # Loading spinner
+    |   |-- ProductItem.jsx    # Product card component
+    |-- /context
+    |   |-- ProductContext.js  # Global state management
+    |-- /pages
+    |   |-- Cart.jsx           # Cart page
+    |   |-- Home.jsx           # Home page
+    |   |-- NotFound.jsx       # 404 page
+    |   |-- Products.jsx       # Products listing page
+    |-- App.js                 # Main app with routes
 |-- index.js               # Entry point
 
 
