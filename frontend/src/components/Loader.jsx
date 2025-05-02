@@ -1,6 +1,5 @@
 import { RingLoader } from "react-spinners";
 
-// Change colors, sizes, and speeds easily:
 const Loader = () => {
   return (
     <div className="flex items-center justify-center h-[80vh] lg:h-[60vh]">

@@ -32,8 +32,8 @@ A modern, responsive e-commerce application built with React, featuring product 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/ecommerce-shopping-cart.git
-   cd ecommerce-shopping-cart
+   git clone https://github.com/RajaXCoder/arizon-assign.git
+   cd arizon-assign
    
 
 2. Install dependencies:
@@ -76,11 +76,10 @@ The application fetches product data from:
     |   |-- NotFound.jsx       # 404 page
     |   |-- Products.jsx       # Products listing page
     |-- App.js                 # Main app with routes
-|-- index.js               # Entry point
 
 
 
-## Implementation Details
+### Implementation Details
 Routing: Implemented with React Router for seamless navigation between Home, Products, and Cart pages
 
 State Management: Used Context API to manage global state (products and cart items)

@@ -1,4 +1,3 @@
-// CartItem.js
 import { useContext } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import ProductContext from "../context/ProductContext";

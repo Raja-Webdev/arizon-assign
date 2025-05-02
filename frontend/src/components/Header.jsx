@@ -17,13 +17,13 @@ const Header = () => {
       current: location.pathname === "/products",
     },
     { name: "Cart", href: "/cart", current: location.pathname === "/cart" },
-  ].filter((item) => !item.current); // Filter out current page
+  ].filter((item) => !item.current); 
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
+          
           <div className="flex items-center">
             <button onClick={() => navigate("/")} className="flex items-center">
               <img

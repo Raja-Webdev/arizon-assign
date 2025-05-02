@@ -22,7 +22,6 @@ const Cart = () => {
     alert("Checkout functionality is not implemented yet.");
   };
 
-  const loading = false; // Simulate loading state
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -39,60 +38,51 @@ const Cart = () => {
             className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div>
-        {loading ? (
-          <div className="text-center text-xl text-gray-600 py-12 sm:py-18 lg:py-24">
-            <Loader />
-          </div>
-        ) : (
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-5 sm:pt-8 lg:pt-10">
-            <h1 className="mb-3 text-3xl font-bold text-gray-900">
-              Your Shopping Cart
-            </h1>
 
-            {cartsList.length === 0 ? (
-              <EmptyCart />
-            ) : (
-              <div className="space-y-6">
-                {/* Vertical list of cart items */}
-                <div className="space-y-4">
-                  {cartsList.map((item) => (
-                    <CartItem item={item} key={item.id} />
-                  ))}
-                </div>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-5 sm:pt-8 lg:pt-10">
+          <h1 className="mb-3 text-3xl font-bold text-gray-900">
+            Your Shopping Cart
+          </h1>
 
-                {/* Order Summary */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 sticky bottom-0">
-                  <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span>
-                        Subtotal (
-                        {cartsList.reduce(
-                          (acc, item) => acc + item.quantity,
-                          0
-                        )}{" "}
-                        items)
-                      </span>
-                      <span>${totalPrice.toFixed(2)}</span>
-                    </div>
-
-                    <div className="border-t border-gray-200 my-2"></div>
-                    <div className="flex justify-between font-bold text-lg">
-                      <span>Total</span>
-                      <span>${totalPrice.toFixed(2)}</span>
-                    </div>
-                  </div>
-                  <button
-                    onClick={handleCheckout}
-                    className="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-4 rounded-md font-medium transition-colors"
-                  >
-                    Proceed to Checkout
-                  </button>
-                </div>
+          {cartsList.length === 0 ? (
+            <EmptyCart />
+          ) : (
+            <div className="space-y-6">
+              <div className="space-y-4">
+                {cartsList.map((item) => (
+                  <CartItem item={item} key={item.id} />
+                ))}
               </div>
-            )}
-          </div>
-        )}
+
+              {/* Order Summary */}
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 sticky bottom-0">
+                <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span>
+                      Subtotal (
+                      {cartsList.reduce((acc, item) => acc + item.quantity, 0)}{" "}
+                      items)
+                    </span>
+                    <span>${totalPrice.toFixed(2)}</span>
+                  </div>
+
+                  <div className="border-t border-gray-200 my-2"></div>
+                  <div className="flex justify-between font-bold text-lg">
+                    <span>Total</span>
+                    <span>${totalPrice.toFixed(2)}</span>
+                  </div>
+                </div>
+                <button
+                  onClick={handleCheckout}
+                  className="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-4 rounded-md font-medium transition-colors"
+                >
+                  Proceed to Checkout
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
