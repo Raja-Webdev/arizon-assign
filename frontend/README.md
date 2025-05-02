@@ -38,14 +38,15 @@ A modern, responsive e-commerce application built with React, featuring product 
 
 2. Install dependencies:
 
-   npm install
+    ```bash 
+    npm install
     # or
     yarn install
 
 3. Start the development server:
-
+    ```bash 
     npm start
-    # or
+    #or
     yarn start
 
 4. Open your browser at:
